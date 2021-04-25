@@ -1,0 +1,45 @@
+body {
+    text-align: center;
+}
+
+li {
+    display: inline;
+}
+
+a {
+    padding: 10px;
+    text-decoration-line: none;
+}
+
+button {
+    size: 25px 25px;
+}
+
+.sub-section {
+    margin: 10px;
+    padding: 10px;
+    display: inline-block;
+    background-color: yellow;
+}
+
+.section {
+    display: none;
+    border: 5px solid black;
+    margin: 25px;
+    padding: 25px;
+}
+
+.nav-bar {
+    text-align: left;
+    padding: 10px;
+    background-color: yellow;
+}
+
+.active {
+    background-color: greenyellow;
+}
+
+.div-active {
+    display: block;
+}
+

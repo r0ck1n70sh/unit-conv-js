@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="UTF-8">
+	<link rel='stylesheet' href='style.css'>
+	<script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+
+	<title>Unit Converter@r0ck1n70sh</title>
+</head>
+
+<body>
+	<h1>Unit Converter</h1>
+
+	<ul class='nav-bar'>
+		<li><a href='#length'>Length</a></li>
+		<li><a href='#weight'>Weight</a></li>
+		<li><a href='#temperature'>Temperature</a></li>
+	</ul>
+
+	<div id='length' class='section'>
+		Length
+	</div>
+
+	<div id='weight' class='section'>
+		Weight
+	</div>
+
+	<div id='temperature' class='section'>
+		<h2>Temperature</h2>
+
+		<div class='sub-section'>
+			<label for='input-temp-val'>Enter temperature:</label>
+			<input type='number' name='input-temp-val'>
+			<br>
+			<label for='input-temp-type'>Choose input temperature:</label>
+			<br>
+			<select name='input-temp-type' multiple>
+				<option value='celsius'>Celsius</option>
+				<option value='fahrenheit'>Fahrenheit</option>
+				<option value='kelvin'>Kelvin</option>
+			</select>
+		</div>
+
+		<div class='sub-section'>
+			<div id='output-temp-val'>Value not found!</div>
+			<label for='output-temp-type'>Choose output temperature:</label>
+			<br>
+			<select name='output-temp-type' multiple>
+				<option value='celsius'>Celsius</option>
+				<option value='fahrenheit'>Fahrenheit</option>
+				<option value='kelvin'>Kelvin</option>
+			</select>
+		</div>
+
+		<div>
+			<button id='btn-temp-cal'>Calculate</button>
+		</div>
+	</div>
+
+</body>
+<script type='text/javascript' src='script.js'></script>
+
+</html>
+
