@@ -17,11 +17,69 @@
 	</ul>
 
 	<div id='length' class='section'>
-		Length
+		<h2>Length</h2>
+
+		<div class='sub-section'>
+			<label for='input-len-val'>Enter length:</label>
+			<input type='number' name='input-len-val'>
+			<br>
+			<label for='input-len-type'>Choose input length:</label>
+			<br>
+			<select name='input-len-type' multiple>
+				<option value='meter'>Meter</option>
+				<option value='feet'>Feet</option>
+				<option value='kilometer'>Kilometer</option>
+			</select>
+		</div>
+
+		<div class='sub-section'>
+			<div id='output-len-val'>Value not found!</div>
+			<label for='output-len-type'>Choose output length:</label>
+			<br>
+			<select name='output-len-type' multiple>
+				<option value='meter'>Meter</option>
+				<option value='feet'>Feet</option>
+				<option value='kilometer'>Kilometer</option>
+			</select>
+		</div>
+
+		<div>
+			<button id='btn-len-cal'>Calculate</button>
+		</div>
+
 	</div>
 
 	<div id='weight' class='section'>
-		Weight
+		<h2>Weight</h2>
+
+		<div class='sub-section'>
+			<label for='input-weight-val'>Enter weight:</label>
+			<input type='number' name='input-weight-val'>
+			<br>
+			<label for='input-weight-type'>Choose input weight:</label>
+			<br>
+			<select name='input-weight-type' multiple>
+				<option value='gram'>Gram</option>
+				<option value='pound'>Pound</option>
+				<option value='ounce'>Ounce</option>
+			</select>
+		</div>
+
+		<div class='sub-section'>
+			<div id='output-weight-val'>Value not found!</div>
+			<label for='output-weight-type'>Choose output weight:</label>
+			<br>
+			<select name='output-weight-type' multiple>
+				<option value='gram'>Gram</option>
+				<option value='pound'>Pound</option>
+				<option value='ounce'>Ounce</option>
+			</select>
+		</div>
+
+		<div>
+			<button id='btn-weight-cal'>Calculate</button>
+		</div>
+
 	</div>
 
 	<div id='temperature' class='section'>

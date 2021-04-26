@@ -17,6 +17,90 @@ $('a').each((idx, val) => {
     });
 });
 
+$('#btn-len-cal').click(() => {
+    let inputLenVal = parseInt($('[name=input-len-val]').val());
+    let inputLenType = $('[name=input-len-type]').val()[0];
+    
+    let lenMeter;
+    switch(inputLenType){
+        case 'meter':
+            lenMeter = inputLenVal;
+            break;
+        case 'feet':
+            lenMeter = inputLenVal / 3.281;
+            break;
+        case 'kilometer':
+            lenMeter = inputLenVal * 1000;
+            break;
+        default:
+            throw new Error('invalid input');
+    }
+    
+    let outputLenType = $('[name=output-len-type]').val()[0];
+    let outputLenVal;
+    switch(outputLenType){
+        case 'meter':
+            outputLenVal = inputLenVal;
+            break;
+        case 'feet':
+            outputLenVal = inputLenVal * 3.281;
+            break;
+        case 'kilometer':
+            outputLenVal = inputLenVal / 1000;
+            break;
+        default:
+            throw new Error('invalid output');
+    }
+
+    try{
+        $('#output-len-val').text(`Calculated Temperature is: ${outputLenVal.toFixed(4)} ${outputLenType}`);
+    } catch(e){
+        console.error(`${e.name} is ${e.message}`);
+    }
+});
+
+$('#btn-weight-cal').click(() => {
+    let inputWeightVal = parseInt($('[name=input-weight-val]').val());
+    let inputWeightType = $('[name=input-weight-type]').val()[0];
+    
+    let weightGram;
+    switch(inputWeightType){
+        case 'gram':
+            weightGram = inputWeightVal;
+            break;
+        case 'pound':
+            weightGram = inputWeightVal * 454;
+            break;
+        case 'ounce':
+            weightGram = inputWeightVal * 16;
+            break;
+        default:
+            throw new Error('invalid input');
+    }
+    
+    let outputWeightType = $('[name=output-weight-type]').val()[0];
+    let outputWeightVal;
+    switch(outputWeightType){
+        case 'gram':
+            outputWeightVal = weightGram;
+            break;
+        case 'pound':
+            outputWeightVal = weightGram / 454; 
+            break;
+        case 'ounce':
+            outputWeightVal = weightGram / 16;
+            break;
+        default:
+            throw new Error('invalid output');
+    }
+
+    try{
+        $('#output-weight-val').text(`Calculated Temperature is: ${outputWeightVal.toFixed(4)} ${outputWeightType}`);
+    } catch(e){
+        console.error(`${e.name} is ${e.message}`);
+    }
+});
+
 $('#btn-temp-cal').click(() => {
     let inputTempVal = parseInt($('[name=input-temp-val]').val());
     let inputTempType = $('[name=input-temp-type]').val()[0];
@@ -53,13 +137,10 @@ $('#btn-temp-cal').click(() => {
     }
 
     try{
-        $('#output-temp-val').text(`Calculated Temperature is: ${outputTempVal} ${outputTempType[0].toUpperCase()}`);
+        $('#output-temp-val').text(`Calculated Temperature is: ${outputTempVal.toFixed(4)} ${outputTempType[0].toUpperCase()}`);
     } catch(e){
         console.error(`${e.name} is ${e.message}`);
     }
-    
-    console.log(`input val ${inputTempVal}`);
-    console.log(`input type ${inputTempType}`);
-    console.log(`output val ${outputTempVal}`);
-    console.log(`output type ${outputTempType}`);
 });
+
+
