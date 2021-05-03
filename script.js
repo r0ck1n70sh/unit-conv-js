@@ -1,19 +1,15 @@
-$('a').each((idx, val) => {
-    $(val).mouseover(() => {
-        $(val).addClass('active');
-    });
+const $navBarLinks = $('a');
 
-    $(val).mouseout(() => {
-        $(val).removeClass('active');
-    });
+$navBarLinks.each((idx, navBarItem) => {
+    const showDivCSSClass = 'div-active';
+    const selfDivId = $(navBarItem).attr('href');
+    
+    $(navBarItem).click(() => {
+        $('.section').each((i, subSectionId) => {
+            $(subSectionId).removeClass(showDivCSSClass);
+        });
 
-    $(val).click(() => {
-        $('div').removeClass('div-active');
-
-        let href = $(val).attr('href');
-        $(href).addClass('div-active');
-
-        console.log(href);
+        $(selfDivId).addClass(showDivCSSClass);
     });
 });
 
