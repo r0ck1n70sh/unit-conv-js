@@ -2,6 +2,7 @@ const express = require('express')
 const path = require('path');
 const app = express();
 const router = express.Router();
+const PORT = process.env.PORT || 5000;
 
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname+'/index.html'));
@@ -16,4 +17,4 @@ app.get('/script.js', (req, res) => {
 })
 
 app.use("/", router);
-app.listen(process.env.port || 5000, () => console.log('server ready...'))
+app.listen(PORT, () => console.log('server ready...'))
