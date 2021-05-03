@@ -16,4 +16,4 @@ app.get('/script.js', (req, res) => {
 })
 
 app.use("/", router);
-app.listen(process.env.port || 3000, () => console.log('server ready...'))
+app.listen(process.env.port || 5000, () => console.log('server ready...'))
