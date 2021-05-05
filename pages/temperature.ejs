@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+    <head>
+        <%- include('../templates/header'); %> 
+    </head>
+
+    <body>
+        <%- include('../templates/navbar'); %>
+
+        <h2>Temperature</h2>
+
+		<div class='sub-section'>
+			<label for='input-temp-val'>Enter temperature:</label>
+			<input type='number' name='input-temp-val'>
+			<br>
+			<label for='input-temp-type'>Choose input temperature:</label>
+			<br>
+			<select name='input-temp-type' multiple>
+				<option value='celsius'>Celsius</option>
+				<option value='fahrenheit'>Fahrenheit</option>
+				<option value='kelvin'>Kelvin</option>
+			</select>
+		</div>
+
+		<div class='sub-section'>
+			<div id='output-temp-val'>Value not found!</div>
+			<label for='output-temp-type'>Choose output temperature:</label>
+			<br>
+			<select name='output-temp-type' multiple>
+				<option value='celsius'>Celsius</option>
+				<option value='fahrenheit'>Fahrenheit</option>
+				<option value='kelvin'>Kelvin</option>
+			</select>
+		</div>
+
+		<div>
+			<button id='btn-temp-cal'>Calculate</button>
+		</div>
+
+    </body>
+</html>

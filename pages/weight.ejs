@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+    <head>
+        <%- include('../templates/header'); %> 
+    </head>
+
+    <body>
+        <%- include('../templates/navbar'); %>
+
+        <div class='sub-section'>
+			<label for='input-weight-val'>Enter weight:</label>
+			<input type='number' name='input-weight-val'>
+			<br>
+			<label for='input-weight-type'>Choose input weight:</label>
+			<br>
+			<select name='input-weight-type' multiple>
+				<option value='gram'>Gram</option>
+				<option value='pound'>Pound</option>
+				<option value='ounce'>Ounce</option>
+			</select>
+		</div>
+
+		<div class='sub-section'>
+			<div id='output-weight-val'>Value not found!</div>
+			<label for='output-weight-type'>Choose output weight:</label>
+			<br>
+			<select name='output-weight-type' multiple>
+				<option value='gram'>Gram</option>
+				<option value='pound'>Pound</option>
+				<option value='ounce'>Ounce</option>
+			</select>
+		</div>
+
+		<div>
+			<button id='btn-weight-cal'>Calculate</button>
+		</div>
+
+    </body>
+</html>

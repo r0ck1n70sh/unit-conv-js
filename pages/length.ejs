@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+    <head>
+        <%- include('../templates/header'); %> 
+    </head>
+
+    <body>
+        <%- include('../templates/navbar'); %>
+
+        <div id='length'>
+            <h2>Length</h2>
+    
+            <div class='sub-section'>
+                <label for='input-len-val'>Enter length:</label>
+                <input type='number' name='input-len-val'>
+                <br>
+                <label for='input-len-type'>Choose input length:</label>
+                <br>
+                <select name='input-len-type' multiple>
+                    <option value='meter'>Meter</option>
+                    <option value='feet'>Feet</option>
+                    <option value='kilometer'>Kilometer</option>
+                </select>
+            </div>
+    
+            <div class='sub-section'>
+                <div id='output-len-val'>Value not found!</div>
+                <label for='output-len-type'>Choose output length:</label>
+                <br>
+                <select name='output-len-type' multiple>
+                    <option value='meter'>Meter</option>
+                    <option value='feet'>Feet</option>
+                    <option value='kilometer'>Kilometer</option>
+                </select>
+            </div>
+    
+            <div>
+                <button id='btn-len-cal'>Calculate</button>
+            </div>
+    
+        </div>
+
+    </body>
+</html>
